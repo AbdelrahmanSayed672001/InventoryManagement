@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="1224.0" maxWidth="1280.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="431.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane prefHeight="174.0" prefWidth="600.0" style="-fx-background-color: #06e3fc;">
+         <children>
+            <Label alignment="CENTER" layoutX="57.0" layoutY="36.0" prefHeight="20.0" prefWidth="34.0" text="ID">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="id" layoutX="91.0" layoutY="34.0" prefHeight="25.0" prefWidth="69.0" />
+            <Label layoutX="250.0" layoutY="36.0" prefHeight="20.0" prefWidth="106.0" text="Product_name">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="product_name" layoutX="356.0" layoutY="34.0" />
+            <Label layoutX="57.0" layoutY="80.0" prefHeight="20.0" prefWidth="76.0" text="Manu_date">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="manu_date" layoutX="133.0" layoutY="77.0" prefHeight="25.0" prefWidth="133.0" promptText="dd-mm-yy" />
+            <Label layoutX="303.0" layoutY="80.0" prefHeight="20.0" prefWidth="69.0" text="Exp_date">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="exp_date" layoutX="372.0" layoutY="78.0" prefHeight="25.0" prefWidth="133.0" promptText="dd-mm-yy" />
+            <Label layoutX="57.0" layoutY="121.0" prefHeight="20.0" prefWidth="63.0" text="Quantity">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="quantity" layoutX="120.0" layoutY="118.0" prefHeight="25.0" prefWidth="76.0" />
+            <Button fx:id="addbtn" layoutX="266.0" layoutY="125.0" mnemonicParsing="false" onAction="#AddProduct" prefHeight="25.0" prefWidth="69.0" style="-fx-background-color: #034401; -fx-background-radius: 12;" text="Add" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="ADD" />
+               </effect>
+            </Button>
+            <Button fx:id="deletebtn" layoutX="463.0" layoutY="126.0" mnemonicParsing="false" onAction="#DeleteProduct" prefHeight="30.0" prefWidth="69.0" style="-fx-background-color: #670402; -fx-background-radius: 12;" text="Delete" textFill="#f5f4f4">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="ADD" />
+               </effect>
+            </Button>
+            <Button fx:id="update" layoutX="363.0" layoutY="126.0" mnemonicParsing="false" onAction="#UpdateProduct" prefHeight="30.0" prefWidth="76.0" style="-fx-background-color: black; -fx-background-radius: 12;" text="Update" textFill="#f5f4f4">
+               <font>
+                  <Font name="Arial Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <Blend mode="ADD" />
+               </effect>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutY="173.0" onSort="#TableUpdate" prefHeight="259.0" prefWidth="600.0" style="-fx-background-color: #878a8a;">
+        <columns>
+          <TableColumn fx:id="col_id" editable="false" prefWidth="59.33334219455719" style="-fx-background-color: #e2c607;" text="ID" />
+          <TableColumn fx:id="col_product_name" editable="false" prefWidth="168.66668319702148" style="-fx-background-color: white;" text="Product_name" />
+            <TableColumn fx:id="col_manu_date" editable="false" prefWidth="119.33332824707031" style="-fx-background-color: white;" text="Manu_date" />
+            <TableColumn fx:id="col_exp_date" editable="false" prefWidth="114.0" style="-fx-background-color: white;" text="Exp_date" />
+            <TableColumn fx:id="col_quantity" editable="false" prefWidth="136.0" style="-fx-background-color: white;" text="Quantity" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>
